@@ -1,5 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
+import BackButton from './BackButton'
+import { NavigationContainer } from '@react-navigation/native'
 
 const Header = () => {
   return (
@@ -21,7 +23,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         boxShadow: "0 4px 5px #e5e5e5",
         paddingBottom: "20px",
-        marginBottom: "30px",
     },
     logo: {
         fontSize: "30px"

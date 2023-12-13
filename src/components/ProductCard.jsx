@@ -1,50 +1,53 @@
-import {View , Text , Button,StyleSheet } from "react-native"
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 
-const ProductCard = ({ item, onModal }) => {
-    return (
-        <View style={styles.cardProduct}>
-            <View style={styles.descProduct}>
-                <Text style={styles.product__img}>Imagen Prod </Text>
-                <Text style={styles.cardTitle}>{item.productName} </Text>
-                <br />
-                <Text> {item.price}U$D</Text>
-            </View>
-            <Button title="Borrar" onPress={() => onModal(item)}/>
-        </View> 
-    )
+
+
+const ProductCard = ({ item }) => {
+  return (
+    <Pressable style={styles.container}>
+        <Image
+            style={styles.image}
+            resizeMode='cover'
+            source={{uri:item.thumbnail}}
+        />
+        <View style={styles.details}>
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.price}>${item.price}</Text>
+        </View>
+    </Pressable>
+  )
 }
+
+export default ProductCard
+
 const styles = StyleSheet.create({
-    cardProduct:{
-        width: 'auto',
-        display: 'flex',
+   container:{
+        height: '250px',
+        width: "auto",
+        backgroundColor: "#e5e5e5", /* no me aplica el color a la tarjeta no se xq */
+        marginHorizontal:"20%",
+        marginVertical:40,
+        borderRadius:5,
         flexDirection:"column",
         alignItems:"center",
-        justifyContent:"space-around",
-        backgroundColor: "#fff",
-        border: '1px solid #e5e5e5',
-        padding: 20,
-        marginVertical: 10,
-        marginHorizontal: 5,
-
-        shadowColor: "#000",
-        shadowOffset: {
-	    width: 0,
-	    height: 7,
-        },
-        shadowOpacity: 0.43,
-        shadowRadius: 9.51,
-
-        elevation: 15,
-        },
-        product__img: {
-            display: "flex",
-            flexDirection:"column",
-        },
-    descProduct: {
-        flexDirection:"row",
-        justifyContent:"space-around",
-        textAlign: "center",
-        marginBottom: 10,
-        },
+        gap:20
+    },
+    image:{
+      borderRadius:5,
+      width: "100%",
+      height: "100%",
+    },
+    details:{
+      flexDirection:"row",
+      gap:40
+    },
+    title:{
+      fontSize: 16,
+      fontWeight: 500,
+    },
+    price:{
+      color: "green",
+      fontWeight: 500,
+      fontSize: 16,
+    },
 })
-export default ProductCard

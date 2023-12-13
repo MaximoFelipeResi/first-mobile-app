@@ -1,14 +1,29 @@
 import { useState } from "react"
 import { View, Text, StyleSheet } from "react-native"
-import uuid from 'react-native-uuid'
+import { useFonts } from "expo-font"
+import Home from "./src/screens/Home"
+import ItemListCategories from "./src/screens/ItemListCategories"
+
+/*import uuid from 'react-native-uuid'
 import Header from "./src/components/Header"
 import DeleteModal from "./src/admin/DeleteModal"
 import AddProduct from "./src/admin/AddProduct"
-import ItemListContainer from "./src/components/ItemListContainer"
+import ItemListContainer from "./src/components/ItemListContainer"*/
 
 
 const App = () => {
+  const [ categorySelected, setCategorySelected ] = useState("")
 
+  const [ fontsLoaded ] = useFonts({
+    "Inconsolata": require('../first-mobile-app/assets/fonts/Inconsolata_Condensed-Medium.ttf'),
+  })
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
+  
+    /*
     const [ enterTitle, setEnterTitle ] = useState("")
     const [ enterPrice, setEnterPrice ] = useState("")
     const [ products, setProducts ] = useState([])
@@ -36,26 +51,18 @@ const App = () => {
       setProducts(current => current.filter(product => product.id !== productSelected.id))
       setModalVisible(false)
     }
+    */
+
     return (
-            <View  style={styles.container}>
-              <Header/>
-              <AddProduct prodTitle = {enterTitle}
-                prodPrice = {enterPrice}
-                onChangeTitle = {setEnterTitle}
-                onChangePrice = {setEnterPrice}
-                addProduct = {handlerAddProduct}
-              />
-              <ItemListContainer
-                products = {products}
-                onModal = {handlerModal}
-              />
-              <DeleteModal
-                product = {productSelected}
-                visible={modalVisible}
-                onModal = {handlerModal}
-                deleteProd={handlerDeleteProduct}
-              />
-           </View>
+      <View style={styles.container}>
+        {categorySelected ?
+          <ItemListCategories category = {categorySelected}/>
+        :
+          <Home setCategorySelected = {setCategorySelected}
+          />
+        }
+     
+      </View>
     )
   }
 
