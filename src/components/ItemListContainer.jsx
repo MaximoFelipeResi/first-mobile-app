@@ -1,9 +1,9 @@
-import {View,FlatList,Text,Button,StyleSheet} from "react-native"
+import { View, FlatList, StyleSheet} from "react-native"
 import ProductCard from "./ProductCard"
 
 const ItemListContainer = ({ products, onModal }) => {
     return (
-    <View style={styles.listContainer}>
+            <View style={styles.listContainer}>
                 <FlatList
                     data={products}
                     keyExtractor={item => item.id}
