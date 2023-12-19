@@ -4,7 +4,7 @@
 
     {
             "id": 1,
-            "title": "iPhone 9",
+            "title": "iPhone X",
             "description": "An apple mobile which is nothing like apple",
             "price": 549,
             "discountPercentage": 12.96,
@@ -23,7 +23,7 @@
           },
           {
             "id": 2,
-            "title": "iPhone X",
+            "title": "iPhone XS Max",
             "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
             "price": 899,
             "discountPercentage": 17.94,

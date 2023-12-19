@@ -25,14 +25,14 @@ const Search = ({ setSearchTerm, category, allProducts, setProducts }) => {
         } else {
             setProducts(allProducts);
         }
-        setInput(""); // Esto deberia vaciar el input, pero no lo hace.
+        setInput(""); 
         setError("");
     };
 
   return (
     <View style={styles.main_container}>
          <View style={styles.container_input}> 
-            <TextInput style={styles.input} placeholder='Buscar...' value={input} onChangeText={(t)=> setInput(t)}  />
+            <TextInput style={styles.input} placeholder='Buscar...' value={input} onChangeText={(t)=> setInput(t)}/>
             <Pressable onPress={search}>
                 <AntDesign name='search1' color="black" size={20}/>
             </Pressable>
@@ -50,7 +50,7 @@ export default Search
 
 const styles = StyleSheet.create({
     main_container:{
-        backgroundColor: "#efefef",
+        backgroundColor: "#e6e6e6",
         width:"100%"
     },
     container_input:{

@@ -1,13 +1,14 @@
+import { useEffect, useState } from 'react'
 import { FlatList, Pressable, StyleSheet } from 'react-native'
 import Header from '../components/Header'
 import Search from '../components/Search'
-import allProducts from "../Data/products.json"
 import ProductCard from '../components/ProductCard'
-import { useEffect, useState } from 'react'
+import allProducts from "../Data/products.json"
 
 
-const ItemListCategories = ({ category }) => {
+const ItemListCategories = ({ navigation, route }) => {
 
+  const { category } = route.params;
   const [ searchTerm, setSearchTerm ] = useState("")
   const [ products, setProducts ] = useState(allProducts)
 
@@ -32,7 +33,7 @@ const ItemListCategories = ({ category }) => {
         style={styles.container}
         data={products}
         keyExtractor={item => item.id}
-        renderItem={({item})=> <ProductCard item={item}/>}
+        renderItem={({item})=> <ProductCard item={item} navigation={navigation} route={route}/>}
       />
     </>
   )

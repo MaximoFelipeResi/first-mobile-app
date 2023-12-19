@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
-import BackButton from './BackButton'
-import { NavigationContainer } from '@react-navigation/native'
 
 const Header = () => {
   return (
