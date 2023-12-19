@@ -1,43 +1,50 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import categories from '../data/categories.json';
-import CategoryItem from './CategoryItem';
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import SelectDropdown from 'react-native-select-dropdown';
+import categories from '../data/categories.json';
 
-const Categories = ({ setCategorySelected }) => {
-  const categoryItems = categories.map(category => ({ value: category }));
+const Categories = ({ route, navigation }) => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategoryChange = (index, value) => {
+    setSelectedCategory(value);
+    navigation.navigate('Category', { category: route.category });
+  };
 
   return (
-    <SelectDropdown
-      data={categoryItems}
-      onSelect={(selectedItem, index) => {
-        setCategorySelected(selectedItem.value);
-      }}
-      buttonTextAfterSelection={(selectedItem, index) => {
-        return selectedItem.value;
-      }}
-      rowTextForSelection={(item, index) => {
-        return item.value;
-      }}
-      buttonStyle={styles.dropdown}
-      buttonTextStyle={styles.dropdownText}
-      defaultValueByIndex={0}
-    />
+    <View style={styles.container}>
+      <SelectDropdown
+        data={categories}
+        onSelect={(index, value) => handleCategoryChange(index, value)}
+        buttonTextAfterSelection={(selectedItem, index) => selectedItem}
+        rowTextForSelection={(item, index) => item}
+        buttonStyle={styles.dropdown}
+        buttonTextStyle={styles.dropdownText}
+        dropdownStyle={styles.dropdown}
+        dropdownTextStyle={styles.dropdownText}
+      />
+    </View>
   );
 };
 
 export default Categories;
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: 20,
+  },
   dropdown: {
     width: '80%',
-    backgroundColor: '#eee',
-    marginTop: '10px',
+    backgroundColor: '#e9e9e9',
+    marginTop: 10,
     padding: 10,
     borderRadius: 8,
   },
   dropdownText: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#333',
   },
 });

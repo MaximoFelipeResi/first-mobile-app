@@ -2,9 +2,11 @@ import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 
 
 
-const ProductCard = ({ item }) => {
+const ProductCard = ({ item, navigation, route }) => {
+
+
   return (
-    <Pressable style={styles.container}>
+    <Pressable style={styles.container} onPress={() => navigation.navigate("Product", {id:item.id})}>
         <Image
             style={styles.image}
             resizeMode='cover'
