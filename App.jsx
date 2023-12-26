@@ -2,7 +2,9 @@ import { useState } from "react"
 import { StatusBar, StyleSheet } from "react-native"
 import { useFonts } from "expo-font"
 import { colors } from "./src/Global/colors"
-import Navigator from "./src/navigation/Navigator"
+import { Provider } from "react-redux"
+import { store } from "./src/redux/store"
+import TabNavigator from "./src/navigation/TabNavigator"
 
 
 
@@ -18,10 +20,10 @@ const App = () => {
 
     return (
       <>
-        <StatusBar
-          backgroundColor={colors.lightred2}
-        />
-        <Navigator/>
+        <StatusBar backgroundColor={colors.lightRed}/>
+        <Provider store={store}>
+          <TabNavigator/>
+        </Provider>
       </>
     )
   }
@@ -33,10 +35,6 @@ const App = () => {
       alignItems:"center",
       marginTop:30
     }
-
- 
   })
-
-
 
 export default App
