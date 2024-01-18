@@ -1,21 +1,24 @@
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import { StyleSheet, Text,Image,useWindowDimensions, Pressable } from 'react-native'
+import { colors } from '../global/colors'
+import {  useDispatch } from 'react-redux'
+import { setProductSelected } from '../redux/slices/shopSlice'
 
+const ProductCard = ({item ,navigation,route }) => {
 
-
-const ProductCard = ({ item, navigation, route }) => {
-
-
+  const {width} = useWindowDimensions()
+  const dispatch = useDispatch()
+  
   return (
-    <Pressable style={styles.container} onPress={() => navigation.navigate("Product", {id:item.id})}>
-        <Image
+    <Pressable style={styles.container}  onPress={()=>{
+      dispatch(setProductSelected(item.id))
+      navigation.navigate("Product",{id:item.id})
+      }} >
+      <Text style={width > 350 ? styles.text : styles.textMin}>{item.title}</Text>
+      <Image
             style={styles.image}
             resizeMode='cover'
             source={{uri:item.thumbnail}}
         />
-        <View style={styles.details}>
-          <Text style={styles.title}>{item.title}</Text>
-          <Text style={styles.price}>${item.price}</Text>
-        </View>
     </Pressable>
   )
 }
@@ -24,32 +27,32 @@ export default ProductCard
 
 const styles = StyleSheet.create({
    container:{
-        height: '250px',
-        width: "auto",
-        backgroundColor: "#e5e5e5", /* no me aplica el color a la tarjeta no se xq */
-        marginHorizontal:"20%",
-        marginVertical:40,
+        width:"80%",
+        height:100,
+        backgroundColor:colors.white1,
+        marginHorizontal:"10%",
+        marginVertical:10,
+        paddingHorizontal:10,
+        paddingVertical:15,
         borderRadius:5,
-        flexDirection:"column",
+        flexDirection:"row",
         alignItems:"center",
-        gap:20
+        justifyContent:"space-between",
+        gap:30
+    },
+    text:{
+      width:"60%",
+      textAlign:"center",
+      fontSize:20
+    },
+    textMin:{
+      width:"60%",
+      textAlign:"center",
+      fontSize:15
     },
     image:{
-      borderRadius:5,
-      width: "100%",
-      height: "100%",
-    },
-    details:{
-      flexDirection:"row",
-      gap:40
-    },
-    title:{
-      fontSize: 16,
-      fontWeight: 500,
-    },
-    price:{
-      color: "green",
-      fontWeight: 500,
-      fontSize: 16,
-    },
+        minWidth:90,
+        height:90,
+        width:"30%"
+    }
 })

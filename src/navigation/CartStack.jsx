@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Header from '../components/Header'
-import Cart from '../Screens/Cart'
+import Cart from '../screens/Cart'
 
 const Stack = createNativeStackNavigator()
 

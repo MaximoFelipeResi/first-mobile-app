@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
         paddingBottom: "20px",
     },
     logo: {
-        fontSize: "30px"
+        fontSize: 30,
     }
 })

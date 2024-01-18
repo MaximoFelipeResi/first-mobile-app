@@ -1,26 +1,24 @@
 import { StyleSheet } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import ShopStack from './ShopStack'
-import CartStack from "./CartStack"
-import OrdersStack from './OrdersStack'
-import TabIcon from '../Components/TabIcon'
+import ShopStack from "./ShopStack";
+import CartStack from "./CartStack";
+import OrdersStack from "./OrdersStack";
+import ProfileStack from "./ProfileStack";
+import TabIcon from "../components/TabIcon";
 
 const Tab = createBottomTabNavigator()
-
 
 const TabNavigator = () => {
 
   return (
-    <NavigationContainer>
         <Tab.Navigator
           screenOptions={{
-            headerShown:false,
-            tabBarShowLabel:false,
-            tabBarStyle: styles.tabBar
-
+            headerShown: false,
+            tabBarShowLabel: false,
+            tabBarStyle: styles.tabBar,
           }}
         >
+
           <Tab.Screen
              name="ShopStack"
              component={ShopStack}
@@ -28,6 +26,7 @@ const TabNavigator = () => {
               tabBarIcon:({focused}) => <TabIcon icon="list" label="Productos" focused={focused}/>
              }}
           />
+
           <Tab.Screen 
             name="CartStack" 
             component={CartStack}
@@ -35,6 +34,7 @@ const TabNavigator = () => {
               tabBarIcon:({focused}) =>  <TabIcon icon="shopping-cart" label="Carrito" focused={focused}/> 
              }}
              />
+
              <Tab.Screen 
             name="OrdersStack" 
             component={OrdersStack}
@@ -42,24 +42,29 @@ const TabNavigator = () => {
               tabBarIcon:({focused}) => <TabIcon icon="shopping-bag" label="Pedidos" focused={focused}/> 
              }}
              />
+
+             <Tab.Screen 
+              name="ProfileStack" 
+              component={ProfileStack}
+              options={{
+                tabBarIcon:({focused}) => <TabIcon icon="user" label="Perfil" focused={focused}/> 
+              }}
+             />
       </Tab.Navigator>
-    </NavigationContainer>
   )
 }
 
-export default TabNavigator
+export default TabNavigator;
 
 const styles = StyleSheet.create({
-    tabBar:{
+    tabBar: {
       backgroundColor: "#0e0e0e",
-      elevation:4,
-      position:"absolute",
-      bottom:25,
-      left:20,
-      right:20,
-      borderRadius:15,
-      height:90
-
-
+      elevation: 4,
+      position: "absolute",
+      bottom: 25,
+      left: 20,
+      right: 20,
+      borderRadius: 15,
+      height: 90,
     }
 })

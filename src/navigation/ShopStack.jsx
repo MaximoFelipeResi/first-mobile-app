@@ -1,10 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import Header from '../components/Header'
-import Home from '../screens/Home'
-import ItemListCategories from '../screens/ItemListCategories'
-import ItemDetail from '../screens/ItemDetail'
+import Header from '../components/Header';
+import Home from '../screens/Home';
+import ItemListCategories from '../screens/ItemListCategories';
+import ItemDetail from '../screens/ItemDetail';
 
-const Stack = createNativeStackNavigator()
+const Stack = createNativeStackNavigator();
 
 const ShopStack = () => {
   return (
@@ -30,4 +30,4 @@ const ShopStack = () => {
   )
 }
 
-export default ShopStack
+export default ShopStack;
