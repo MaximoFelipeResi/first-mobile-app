@@ -1,36 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
-import Header from '../components/Header';
-import allProduct from '../Data/products.json';
-import { colors } from '../Global/colors';
+import { colors } from '../global/colors';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../redux/slices/cartSlice';
 
 const ItemDetail = ({ route }) => {
-  const { id } = route.params;
-  const [product, setProduct] = useState({});
+  const dispatch = useDispatch();
+  const product = useSelector((state)=> state.shop.value.productSelected);
   const images = product.images ? product.images : [];
-
-  useEffect(() => {
-    const productFound = allProduct.find((product) => product.id === id);
-    setProduct(productFound);
-  }, [id]);
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        source={{ uri: images[2] }}
-        resizeMode="cover"
-      />
-      <View style={styles.content}>
-        <Text style={styles.title}>{product.title}</Text>
-        <Text style={styles.description}>{product.description}</Text>
-        <View style={styles.priceContainer}>
-          <Text style={styles.price}>$ {product.price}</Text>
-          <Pressable style={styles.buyNowButton}>
-            <Text style={styles.buyNowText}>Comprar</Text>
-          </Pressable>
+      <View style={styles.content} >
+          <Image
+            style={styles.image}
+            source={{uri:images[2]}}
+            resizeMode='cover'
+          />
+          <View style={styles.containerText}>
+            <Text style={styles.title}>{product.title}</Text>
+            <Text>{product.description}</Text>
+          </View>
+          <View style={styles.containerPrice}>
+            <Text style={styles.price}>$ {product.price}</Text>
+            <Pressable style={styles.buyNowButton} onPress={()=> dispatch(addItem(product)) }>
+              <Text style={styles.buyNowText}>Carrito</Text>
+            </Pressable>
+          </View>
         </View>
-      </View>
     </View>
   );
 };
@@ -53,6 +51,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginTop: 30,
   },
+  containerText:{
+    gap:25,
+    paddingHorizontal:5,
+    paddingVertical:25
+   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -75,10 +78,11 @@ const styles = StyleSheet.create({
     color: colors.darkRed,
   },
   buyNowButton: {
-    backgroundColor: colors.red,
-    paddingVertical: 10,
+    backgroundColor: colors.red2,
+    paddingVertical: 15,
     paddingHorizontal: 20,
     borderRadius: 8,
+    alignItems: 'center',
   },
   buyNowText: {
     color: colors.white2,

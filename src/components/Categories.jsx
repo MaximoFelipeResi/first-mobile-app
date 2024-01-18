@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import SelectDropdown from 'react-native-select-dropdown';
-import categories from '../data/categories.json';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { useGetCategoriesQuery } from "../redux/shopServices";
+import SelectDropdown from "react-native-select-dropdown";
+import CategoryItem from "../components/CategoryItem";
 
-const Categories = ({ route, navigation }) => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+const Categories = ({ navigation, route }) => {
+  const { data: categories } = useGetCategoriesQuery();
 
-  const handleCategoryChange = (index, value) => {
-    setSelectedCategory(value);
-    navigation.navigate('Category', { category: route.category });
+  const handleCategorySelect = (category) => {
+    console.log("Categoría seleccionada:", category);
+    navigation.navigate("Category", { category });
   };
 
   return (
     <View style={styles.container}>
       <SelectDropdown
         data={categories}
-        onSelect={(index, value) => handleCategoryChange(index, value)}
-        buttonTextAfterSelection={(selectedItem, index) => selectedItem}
-        rowTextForSelection={(item, index) => item}
-        buttonStyle={styles.dropdown}
-        buttonTextStyle={styles.dropdownText}
+        onSelect={(selectedCategory) => handleCategorySelect(selectedCategory)}
+        buttonTextAfterSelection={(selectedCategory) => selectedCategory}
+        rowTextForSelection={(item) => item}
+        buttonStyle={styles.dropdownButton}
         dropdownStyle={styles.dropdown}
-        dropdownTextStyle={styles.dropdownText}
+        rowStyle={styles.categoryItem}
       />
     </View>
   );
@@ -32,19 +32,28 @@ export default Categories;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    padding: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  dropdownButton: {
+    width: "80%",
+    height: 40,
+    backgroundColor: "lightgray",
+    justifyContent: "center",
+    paddingHorizontal: 10,
+    borderRadius: 5,
+    marginBottom: 10,
   },
   dropdown: {
-    width: '80%',
-    backgroundColor: '#e9e9e9',
-    marginTop: 10,
-    padding: 10,
-    borderRadius: 8,
+    width: "80%",
+    marginTop: 5,
+    borderRadius: 5,
+    backgroundColor: "white",
+    elevation: 3,
   },
-  dropdownText: {
-    fontSize: 18,
-    color: '#333',
+  categoryItem: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "lightgray",
   },
 });

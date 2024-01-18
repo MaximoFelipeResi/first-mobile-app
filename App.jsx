@@ -1,12 +1,10 @@
-import { useState } from "react"
-import { StatusBar, StyleSheet } from "react-native"
-import { useFonts } from "expo-font"
-import { colors } from "./src/Global/colors"
-import { Provider } from "react-redux"
-import { store } from "./src/redux/store"
-import TabNavigator from "./src/navigation/TabNavigator"
-
-
+import React, { useState } from "react";
+import { StatusBar, StyleSheet } from "react-native";
+import { useFonts } from "expo-font";
+import { colors } from "./src/global/colors";
+import { Provider } from "react-redux";
+import { store } from "./src/redux/store";
+import MainNavigator from "./src/navigation/MainNavigator";
 
 const App = () => {
 
@@ -22,7 +20,7 @@ const App = () => {
       <>
         <StatusBar backgroundColor={colors.lightRed}/>
         <Provider store={store}>
-          <TabNavigator/>
+          <MainNavigator/>
         </Provider>
       </>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { colors } from '../Global/colors';
+import { colors } from '../global/colors';
 
 const OrderItem = ({ order }) => {
   const total = order.items.reduce(
@@ -9,14 +9,12 @@ const OrderItem = ({ order }) => {
     0
   );
 
-  const formattedDate = new Date(order.createdAt).toLocaleString();
-
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.infoContainer}>
         <View style={styles.textContainer}>
-          <Text style={styles.text1}>{formattedDate}</Text>
-          <Text style={styles.text2}>Total: $ {total.toFixed(2)}</Text>
+          <Text style={styles.text1}>{new Date(order.createdAt).toLocaleString()}</Text>
+          <Text style={styles.text2}>Total: $ {total}</Text>
         </View>
         <View style={styles.iconContainer}>
           <Feather name="check" size={25} color="green" />

@@ -1,18 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { colors } from '../Global/colors';
+import { colors } from '../global/colors';
+import { useDispatch } from 'react-redux';
+import { removeItem } from '../redux/slices/cartSlice';
 
 const CartItem = ({ item }) => {
+
+    const dispatch = useDispatch();
+
+    const handleRemoveItem = () => {
+      dispatch(removeItem({ id: item.id }));
+    };
+
   return (
     <TouchableOpacity style={styles.container}>
       <View style={styles.infoContainer}>
         <View style={styles.textContainer}>
           <Text style={styles.text1}>{item.title}</Text>
           <Text style={styles.text2}>{item.brand}</Text>
-          <Text style={styles.text3}>Price: $ {item.price}</Text>
+          <Text style={styles.text3}>Cantidad: {item.quantity} Price: $ {item.price}</Text>
         </View>
-        <TouchableOpacity style={styles.iconContainer}>
+        <TouchableOpacity style={styles.iconContainer} onPress={handleRemoveItem}>
           <Ionicons name="ios-trash-bin-outline" size={30} color={colors.white1} />
         </TouchableOpacity>
       </View>
