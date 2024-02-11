@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import { colors } from '../global/colors';
 import { useDispatch } from 'react-redux';
 import { removeItem } from '../redux/slices/cartSlice';
@@ -18,11 +18,11 @@ const CartItem = ({ item }) => {
       <View style={styles.infoContainer}>
         <View style={styles.textContainer}>
           <Text style={styles.text1}>{item.title}</Text>
-          <Text style={styles.text2}>{item.brand}</Text>
+          <Text style={styles.text2}>Marca: {item.brand}</Text>
           <Text style={styles.text3}>Cantidad: {item.quantity} Price: $ {item.price}</Text>
         </View>
         <TouchableOpacity style={styles.iconContainer} onPress={handleRemoveItem}>
-          <Ionicons name="ios-trash-bin-outline" size={30} color={colors.white1} />
+          <Feather name="trash" size={25} color="white" />
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
@@ -55,19 +55,19 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   text2: {
-    fontSize: 16,
+    fontSize: 20,
     color: colors.darkRed,
     fontFamily: 'Inconsolata',
   },
   text3: {
     fontSize: 20,
-    color: "#07ee55",
+    color: "#006400",
     fontFamily: 'Inconsolata',
     marginTop: 8,
   },
   iconContainer: {
     padding: 10,
     borderRadius: 30,
-    backgroundColor: colors.darkRed2,
+    backgroundColor: colors.red,
   },
 });

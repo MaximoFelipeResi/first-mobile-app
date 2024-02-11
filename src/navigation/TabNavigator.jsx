@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { StyleSheet } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ShopStack from "./ShopStack";
 import CartStack from "./CartStack";
 import OrdersStack from "./OrdersStack";
@@ -58,13 +58,9 @@ export default TabNavigator;
 
 const styles = StyleSheet.create({
     tabBar: {
-      backgroundColor: "#0e0e0e",
+      backgroundColor: "#e6e6e6",
       elevation: 4,
       position: "absolute",
-      bottom: 25,
-      left: 20,
-      right: 20,
-      borderRadius: 15,
       height: 90,
     }
 })

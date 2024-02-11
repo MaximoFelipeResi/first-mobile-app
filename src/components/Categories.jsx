@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { useGetCategoriesQuery } from "../redux/shopServices";
 import SelectDropdown from "react-native-select-dropdown";
 import CategoryItem from "../components/CategoryItem";
@@ -14,6 +14,7 @@ const Categories = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.text}>Selecciona una categoria:</Text>
       <SelectDropdown
         data={categories}
         onSelect={(selectedCategory) => handleCategorySelect(selectedCategory)}
@@ -35,6 +36,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  text: {
+    fontSize: 20,
+    paddingVertical: 10,
+  },  
   dropdownButton: {
     width: "80%",
     height: 40,

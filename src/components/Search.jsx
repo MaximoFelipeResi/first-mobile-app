@@ -1,6 +1,6 @@
-import { StyleSheet, View, Pressable, TextInput, Text } from 'react-native'
-import { AntDesign , Entypo } from "@expo/vector-icons"
-import { useState } from 'react'
+import { StyleSheet, View, Pressable, TextInput, Text } from "react-native";
+import { AntDesign , Entypo } from "@expo/vector-icons";
+import { useState } from "react";
 
 
 const Search = ({ setSearchTerm, category, allProducts, setProducts }) => {
@@ -32,9 +32,9 @@ const Search = ({ setSearchTerm, category, allProducts, setProducts }) => {
   return (
     <View style={styles.main_container}>
          <View style={styles.container_input}> 
-            <TextInput style={styles.input} placeholder='Buscar...' value={input} onChangeText={(t)=> setInput(t)}/>
+            <TextInput style={styles.input} placeholder="Buscar..." value={input} onChangeText={(t)=> setInput(t)}/>
             <Pressable onPress={search}>
-                <AntDesign name='search1' color="black" size={20}/>
+                <AntDesign name="search1" color="black" size={20}/>
             </Pressable>
             <Pressable onPress={resetSearchAndRemoveItem} >
                 <Entypo name="cross" size={25} color="black" />
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         width:"100%",
         flexDirection:"row",
         alignItems:"center",
-        gap:10
+        gap:3
     },
     input:{
       backgroundColor: "white",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
       borderRadius:4,
       paddingHorizontal:20,
       paddingVertical:5,
-      margin:15
+      margin:10
     },
     error_input:{
         color:"red",

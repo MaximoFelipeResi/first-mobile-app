@@ -1,0 +1,568 @@
+[
+  {
+    "id": 0,
+    "title": "Samsung Galaxy S21",
+    "description": "High-end smartphone from Samsung with advanced features.",
+    "price": 999,
+    "discountPercentage": 10,
+    "rating": 4.8,
+    "stock": 30,
+    "brand": "Samsung",
+    "category": "Samsung",
+    "thumbnail": "https://i.imgur.com/GalaxyS21_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/GalaxyS21_1.jpg",
+      "https://i.imgur.com/GalaxyS21_2.jpg",
+      "https://i.imgur.com/GalaxyS21_3.jpg",
+      "https://i.imgur.com/GalaxyS21_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Apple iPhone 13",
+    "description": "The latest iPhone with an elegant design and powerful performance.",
+    "price": 1099,
+    "discountPercentage": 8.5,
+    "rating": 4.9,
+    "stock": 28,
+    "brand": "Apple",
+    "category": "Apple",
+    "thumbnail": "https://i.imgur.com/iPhone13_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/iPhone13_1.jpg",
+      "https://i.imgur.com/iPhone13_2.jpg",
+      "https://i.imgur.com/iPhone13_3.jpg",
+      "https://i.imgur.com/iPhone13_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Huawei P50 Pro",
+    "description": "Huawei's flagship with exceptional camera capabilities and stylish design.",
+    "price": 1199,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 25,
+    "brand": "Huawei",
+    "category": "Huawei",
+    "thumbnail": "https://i.imgur.com/HuaweiP50Pro_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/HuaweiP50Pro_1.jpg",
+      "https://i.imgur.com/HuaweiP50Pro_2.jpg",
+      "https://i.imgur.com/HuaweiP50Pro_3.jpg",
+      "https://i.imgur.com/HuaweiP50Pro_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Xiaomi Mi 12",
+    "description": "Xiaomi's latest flagship offering powerful performance and innovative features.",
+    "price": 1099,
+    "discountPercentage": 12,
+    "rating": 4.8,
+    "stock": 20,
+    "brand": "Xiaomi",
+    "category": "Xiaomi",
+    "thumbnail": "https://i.imgur.com/XiaomiMi12_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/XiaomiMi12_1.jpg",
+      "https://i.imgur.com/XiaomiMi12_2.jpg",
+      "https://i.imgur.com/XiaomiMi12_3.jpg",
+      "https://i.imgur.com/XiaomiMi12_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "Nokia 10",
+    "description": "Nokia's flagship with a durable design and reliable performance.",
+    "price": 899,
+    "discountPercentage": 8,
+    "rating": 4.5,
+    "stock": 18,
+    "brand": "Nokia",
+    "category": "Nokia",
+    "thumbnail": "https://i.imgur.com/Nokia10_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/Nokia10_1.jpg",
+      "https://i.imgur.com/Nokia10_2.jpg",
+      "https://i.imgur.com/Nokia10_3.jpg",
+      "https://i.imgur.com/Nokia10_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "LG Velvet 2 Pro",
+    "description": "LG's sleek and powerful smartphone with a stunning display.",
+    "price": 799,
+    "discountPercentage": 10,
+    "rating": 4.6,
+    "stock": 22,
+    "brand": "LG",
+    "category": "LG",
+    "thumbnail": "https://i.imgur.com/LGVelvet2Pro_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/LGVelvet2Pro_1.jpg",
+      "https://i.imgur.com/LGVelvet2Pro_2.jpg",
+      "https://i.imgur.com/LGVelvet2Pro_3.jpg",
+      "https://i.imgur.com/LGVelvet2Pro_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Motorola Edge 2",
+    "description": "Motorola's latest edge-to-edge display smartphone with enhanced features.",
+    "price": 699,
+    "discountPercentage": 5,
+    "rating": 4.4,
+    "stock": 24,
+    "brand": "Motorola",
+    "category": "Motorola",
+    "thumbnail": "https://i.imgur.com/MotorolaEdge2_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/MotorolaEdge2_1.jpg",
+      "https://i.imgur.com/MotorolaEdge2_2.jpg",
+      "https://i.imgur.com/MotorolaEdge2_3.jpg",
+      "https://i.imgur.com/MotorolaEdge2_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Sony Xperia 5 III",
+    "description": "Sony's compact powerhouse with top-tier camera capabilities.",
+    "price": 1099,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 22,
+    "brand": "Sony",
+    "category": "Sony",
+    "thumbnail": "https://i.imgur.com/SonyXperia5III_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/SonyXperia5III_1.jpg",
+      "https://i.imgur.com/SonyXperia5III_2.jpg",
+      "https://i.imgur.com/SonyXperia5III_3.jpg",
+      "https://i.imgur.com/SonyXperia5III_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 8,
+    "title": "Google Pixel 6",
+    "description": "Google's latest Pixel phone with cutting-edge AI features and impressive camera.",
+    "price": 899,
+    "discountPercentage": 8.5,
+    "rating": 4.8,
+    "stock": 26,
+    "brand": "Google",
+    "category": "Google",
+    "thumbnail": "https://i.imgur.com/GooglePixel6_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/GooglePixel6_1.jpg",
+      "https://i.imgur.com/GooglePixel6_2.jpg",
+      "https://i.imgur.com/GooglePixel6_3.jpg",
+      "https://i.imgur.com/GooglePixel6_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 9,
+    "title": "Samsung Galaxy Note 20",
+    "description": "Premium flagship device with S Pen support and stunning display.",
+    "price": 1099,
+    "discountPercentage": 8,
+    "rating": 4.7,
+    "stock": 24,
+    "brand": "Samsung",
+    "category": "Samsung",
+    "thumbnail": "https://i.imgur.com/GalaxyNote20_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/GalaxyNote20_1.jpg",
+      "https://i.imgur.com/GalaxyNote20_2.jpg",
+      "https://i.imgur.com/GalaxyNote20_3.jpg",
+      "https://i.imgur.com/GalaxyNote20_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Apple iPhone 14",
+    "description": "Upcoming iPhone model with revolutionary features and enhanced performance.",
+    "price": 1199,
+    "discountPercentage": 10,
+    "rating": 4.9,
+    "stock": 20,
+    "brand": "Apple",
+    "category": "Apple",
+    "thumbnail": "https://i.imgur.com/iPhone14_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/iPhone14_1.jpg",
+      "https://i.imgur.com/iPhone14_2.jpg",
+      "https://i.imgur.com/iPhone14_3.jpg",
+      "https://i.imgur.com/iPhone14_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Sony Xperia Z Ultra",
+    "description": "Large-screen smartphone with high-resolution display and impressive camera.",
+    "price": 899,
+    "discountPercentage": 8,
+    "rating": 4.6,
+    "stock": 20,
+    "brand": "Sony",
+    "category": "Sony",
+    "thumbnail": "https://i.imgur.com/SonyXperiaZUltra_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/SonyXperiaZUltra_1.jpg",
+      "https://i.imgur.com/SonyXperiaZUltra_2.jpg",
+      "https://i.imgur.com/SonyXperiaZUltra_3.jpg",
+      "https://i.imgur.com/SonyXperiaZUltra_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Google Pixel 8",
+    "description": "Next-gen Pixel with improved camera features and AI enhancements.",
+    "price": 1099,
+    "discountPercentage": 9,
+    "rating": 4.8,
+    "stock": 18,
+    "brand": "Google",
+    "category": "Google",
+    "thumbnail": "https://i.imgur.com/GooglePixel8_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/GooglePixel8_1.jpg",
+      "https://i.imgur.com/GooglePixel8_2.jpg",
+      "https://i.imgur.com/GooglePixel8_3.jpg",
+      "https://i.imgur.com/GooglePixel8_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Samsung Galaxy A52",
+    "description": "Mid-range Samsung device with a balanced feature set and affordable pricing.",
+    "price": 499,
+    "discountPercentage": 8,
+    "rating": 4.5,
+    "stock": 20,
+    "brand": "Samsung",
+    "category": "Samsung",
+    "thumbnail": "https://i.imgur.com/GalaxyA52_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/GalaxyA52_1.jpg",
+      "https://i.imgur.com/GalaxyA52_2.jpg",
+      "https://i.imgur.com/GalaxyA52_3.jpg",
+      "https://i.imgur.com/GalaxyA52_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Apple iPhone SE (2022)",
+    "description": "Compact iPhone with the latest processor, ideal for those who prefer a smaller form factor.",
+    "price": 699,
+    "discountPercentage": 6.5,
+    "rating": 4.6,
+    "stock": 18,
+    "brand": "Apple",
+    "category": "Apple",
+    "thumbnail": "https://i.imgur.com/iPhoneSE2022_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/iPhoneSE2022_1.jpg",
+      "https://i.imgur.com/iPhoneSE2022_2.jpg",
+      "https://i.imgur.com/iPhoneSE2022_3.jpg",
+      "https://i.imgur.com/iPhoneSE2022_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Huawei Nova 9",
+    "description": "Stylish Huawei device with a focus on camera capabilities and trendy design.",
+    "price": 799,
+    "discountPercentage": 9,
+    "rating": 4.7,
+    "stock": 26,
+    "brand": "Huawei",
+    "category": "Huawei",
+    "thumbnail": "https://i.imgur.com/HuaweiNova9_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/HuaweiNova9_1.jpg",
+      "https://i.imgur.com/HuaweiNova9_2.jpg",
+      "https://i.imgur.com/HuaweiNova9_3.jpg",
+      "https://i.imgur.com/HuaweiNova9_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Xiaomi Redmi Note 10",
+    "description": "Popular Xiaomi device with a large battery and impressive display.",
+    "price": 349,
+    "discountPercentage": 7,
+    "rating": 4.6,
+    "stock": 24,
+    "brand": "Xiaomi",
+    "category": "Xiaomi",
+    "thumbnail": "https://i.imgur.com/XiaomiRedmiNote10_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/XiaomiRedmiNote10_1.jpg",
+      "https://i.imgur.com/XiaomiRedmiNote10_2.jpg",
+      "https://i.imgur.com/XiaomiRedmiNote10_3.jpg",
+      "https://i.imgur.com/XiaomiRedmiNote10_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Sony Xperia 10 IV",
+    "description": "Mid-range Sony device with a focus on multimedia features and a sleek design.",
+    "price": 899,
+    "discountPercentage": 8.5,
+    "rating": 4.5,
+    "stock": 20,
+    "brand": "Sony",
+    "category": "Sony",
+    "thumbnail": "https://i.imgur.com/SonyXperia10IV_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/SonyXperia10IV_1.jpg",
+      "https://i.imgur.com/SonyXperia10IV_2.jpg",
+      "https://i.imgur.com/SonyXperia10IV_3.jpg",
+      "https://i.imgur.com/SonyXperia10IV_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Asus ZenFone 8",
+    "description": "Compact smartphone with powerful performance and impressive camera system.",
+    "price": 849,
+    "discountPercentage": 8,
+    "rating": 4.6,
+    "stock": 20,
+    "brand": "Asus",
+    "category": "Asus",
+    "thumbnail": "https://i.imgur.com/AsusZenFone8_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/AsusZenFone8_1.jpg",
+      "https://i.imgur.com/AsusZenFone8_2.jpg",
+      "https://i.imgur.com/AsusZenFone8_3.jpg",
+      "https://i.imgur.com/AsusZenFone8_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "BlackBerry Evolve X",
+    "description": "Secure and stylish BlackBerry device with a focus on productivity.",
+    "price": 899,
+    "discountPercentage": 7.5,
+    "rating": 4.5,
+    "stock": 18,
+    "brand": "BlackBerry",
+    "category": "BlackBerry",
+    "thumbnail": "https://i.imgur.com/BlackBerryEvolveX_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/BlackBerryEvolveX_1.jpg",
+      "https://i.imgur.com/BlackBerryEvolveX_2.jpg",
+      "https://i.imgur.com/BlackBerryEvolveX_3.jpg",
+      "https://i.imgur.com/BlackBerryEvolveX_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Lenovo Legion Phone 2",
+    "description": "Gaming-centric smartphone with a high-refresh-rate display and powerful specs.",
+    "price": 999,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 22,
+    "brand": "Lenovo",
+    "category": "Lenovo",
+    "thumbnail": "https://i.imgur.com/LenovoLegionPhone2_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/LenovoLegionPhone2_1.jpg",
+      "https://i.imgur.com/LenovoLegionPhone2_2.jpg",
+      "https://i.imgur.com/LenovoLegionPhone2_3.jpg",
+      "https://i.imgur.com/LenovoLegionPhone2_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "ZTE Axon 30 Ultra",
+    "description": "Camera-focused smartphone with advanced photography features and sleek design.",
+    "price": 899,
+    "discountPercentage": 9,
+    "rating": 4.8,
+    "stock": 26,
+    "brand": "ZTE",
+    "category": "ZTE",
+    "thumbnail": "https://i.imgur.com/ZTEAxon30Ultra_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/ZTEAxon30Ultra_1.jpg",
+      "https://i.imgur.com/ZTEAxon30Ultra_2.jpg",
+      "https://i.imgur.com/ZTEAxon30Ultra_3.jpg",
+      "https://i.imgur.com/ZTEAxon30Ultra_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Vivo X70 Pro",
+    "description": "Photography-centric smartphone with Zeiss optics and exceptional low-light performance.",
+    "price": 1099,
+    "discountPercentage": 8.5,
+    "rating": 4.9,
+    "stock": 24,
+    "brand": "Vivo",
+    "category": "Vivo",
+    "thumbnail": "https://i.imgur.com/VivoX70Pro_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/VivoX70Pro_1.jpg",
+      "https://i.imgur.com/VivoX70Pro_2.jpg",
+      "https://i.imgur.com/VivoX70Pro_3.jpg",
+      "https://i.imgur.com/VivoX70Pro_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Oppo Find X5",
+    "description": "Premium Oppo device with a focus on design, performance, and innovative features.",
+    "price": 1199,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 20,
+    "brand": "Oppo",
+    "category": "Oppo",
+    "thumbnail": "https://i.imgur.com/OppoFindX5_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/OppoFindX5_1.jpg",
+      "https://i.imgur.com/OppoFindX5_2.jpg",
+      "https://i.imgur.com/OppoFindX5_3.jpg",
+      "https://i.imgur.com/OppoFindX5_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Realme GT 2 Pro",
+    "description": "Flagship killer with a focus on performance, 120Hz display, and fast charging.",
+    "price": 899,
+    "discountPercentage": 12,
+    "rating": 4.8,
+    "stock": 20,
+    "brand": "Realme",
+    "category": "Realme",
+    "thumbnail": "https://i.imgur.com/RealmeGT2Pro_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/RealmeGT2Pro_1.jpg",
+      "https://i.imgur.com/RealmeGT2Pro_2.jpg",
+      "https://i.imgur.com/RealmeGT2Pro_3.jpg",
+      "https://i.imgur.com/RealmeGT2Pro_thumbnail.jpg"
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Nubia Red Magic 7",
+    "description": "Gaming-focused smartphone with customizable RGB lighting and high-refresh-rate display.",
+    "price": 999,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 22,
+    "brand": "Nubia",
+    "category": "Nubia",
+    "thumbnail": "https://i.imgur.com/NubiaRedMagic7_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/NubiaRedMagic7_1.jpg",
+      "https://i.imgur.com/NubiaRedMagic7_2.jpg",
+      "https://i.imgur.com/NubiaRedMagic7_3.jpg",
+      "https://i.imgur.com/NubiaRedMagic7_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 26,
+    "title": "Motorola Razr 3",
+    "description": "Revamped classic with a foldable display and modern features.",
+    "price": 1299,
+    "discountPercentage": 10,
+    "rating": 4.7,
+    "stock": 15,
+    "brand": "Motorola",
+    "category": "Motorola",
+    "thumbnail": "https://i.imgur.com/MotorolaRazr3_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/MotorolaRazr3_1.jpg",
+      "https://i.imgur.com/MotorolaRazr3_2.jpg",
+      "https://i.imgur.com/MotorolaRazr3_3.jpg",
+      "https://i.imgur.com/MotorolaRazr3_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 27,
+    "title": "LG G9 ThinQ",
+    "description": "LG's flagship with a sleek design and high-end features.",
+    "price": 1099,
+    "discountPercentage": 10,
+    "rating": 4.6,
+    "stock": 22,
+    "brand": "LG",
+    "category": "LG",
+    "thumbnail": "https://i.imgur.com/LGG9ThinQ_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/LGG9ThinQ_1.jpg",
+      "https://i.imgur.com/LGG9ThinQ_2.jpg",
+      "https://i.imgur.com/LGG9ThinQ_3.jpg",
+      "https://i.imgur.com/LGG9ThinQ_thumbnail.jpg"
+    ]
+  },
+ 
+  {
+    "id": 28,
+    "title": "Sony Xperia 1 III",
+    "description": "Sony's flagship with a 4K HDR OLED display and advanced camera system.",
+    "price": 1199,
+    "discountPercentage": 10,
+    "rating": 4.9,
+    "stock": 18,
+    "brand": "Sony",
+    "category": "Sony",
+    "thumbnail": "https://i.imgur.com/SonyXperia1III_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/SonyXperia1III_1.jpg",
+      "https://i.imgur.com/SonyXperia1III_2.jpg",
+      "https://i.imgur.com/SonyXperia1III_3.jpg",
+      "https://i.imgur.com/SonyXperia1III_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 29,
+    "title": "Motorola G8",
+    "description": "Budget-friendly smartphone with a sleek design and decent features.",
+    "price": 199,
+    "discountPercentage": 5,
+    "rating": 4.2,
+    "stock": 15,
+    "brand": "Motorola",
+    "category": "Motorola",
+    "thumbnail": "https://i.imgur.com/MotorolaG8_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/MotorolaG8_1.jpg",
+      "https://i.imgur.com/MotorolaG8_2.jpg",
+      "https://i.imgur.com/MotorolaG8_3.jpg",
+      "https://i.imgur.com/MotorolaG8_thumbnail.jpg"
+    ]
+  },
+
+  {
+    "id": 30,
+    "title": "OnePlus 9 Pro",
+    "description": "Flagship killer with top-notch performance and stunning camera capabilities.",
+    "price": 899,
+    "discountPercentage": 12,
+    "rating": 4.7,
+    "stock": 20,
+    "brand": "OnePlus",
+    "category": "OnePlus",
+    "thumbnail": "https://i.imgur.com/OnePlus9Pro_thumbnail.jpg",
+    "images": [
+      "https://i.imgur.com/OnePlus9Pro_1.jpg",
+      "https://i.imgur.com/OnePlus9Pro_2.jpg",
+      "https://i.imgur.com/OnePlus9Pro_3.jpg",
+      "https://i.imgur.com/OnePlus9Pro_thumbnail.jpg"
+    ]
+  }
+]

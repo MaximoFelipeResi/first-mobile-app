@@ -4,6 +4,7 @@ import { Feather } from '@expo/vector-icons';
 import { colors } from '../global/colors';
 
 const OrderItem = ({ order }) => {
+  
   const total = order.items.reduce(
     (acc, product) => acc + product.price * product.quantity,
     0
@@ -13,8 +14,8 @@ const OrderItem = ({ order }) => {
     <TouchableOpacity style={styles.container}>
       <View style={styles.infoContainer}>
         <View style={styles.textContainer}>
-          <Text style={styles.text1}>{new Date(order.createdAt).toLocaleString()}</Text>
-          <Text style={styles.text2}>Total: $ {total}</Text>
+          <Text style={styles.text1}>{order.updateAt}</Text>
+          <Text style={styles.text2}>Total: $ {order.total}</Text>
         </View>
         <View style={styles.iconContainer}>
           <Feather name="check" size={25} color="green" />

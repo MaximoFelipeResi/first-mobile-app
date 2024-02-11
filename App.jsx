@@ -5,6 +5,11 @@ import { colors } from "./src/global/colors";
 import { Provider } from "react-redux";
 import { store } from "./src/redux/store";
 import MainNavigator from "./src/navigation/MainNavigator";
+import { init } from "./src/index";
+
+init()
+	.then(() => console.log("DB Inicializada"))
+	.catch((err) => console.log(err));
 
 const App = () => {
 

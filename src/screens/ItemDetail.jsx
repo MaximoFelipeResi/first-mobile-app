@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addItem } from '../redux/slices/cartSlice';
 
 const ItemDetail = ({ route }) => {
+
   const dispatch = useDispatch();
   const product = useSelector((state)=> state.shop.value.productSelected);
   const images = product.images ? product.images : [];
@@ -15,7 +16,7 @@ const ItemDetail = ({ route }) => {
       <View style={styles.content} >
           <Image
             style={styles.image}
-            source={{uri:images[2]}}
+            source={{uri:images[1]}}
             resizeMode='cover'
           />
           <View style={styles.containerText}>
@@ -23,9 +24,9 @@ const ItemDetail = ({ route }) => {
             <Text>{product.description}</Text>
           </View>
           <View style={styles.containerPrice}>
-            <Text style={styles.price}>$ {product.price}</Text>
+            <Text style={styles.price}>U$D {product.price}</Text>
             <Pressable style={styles.buyNowButton} onPress={()=> dispatch(addItem(product)) }>
-              <Text style={styles.buyNowText}>Carrito</Text>
+              <Text style={styles.buyNowText}>Agregar al Carrito</Text>
             </Pressable>
           </View>
         </View>
@@ -52,9 +53,9 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   containerText:{
-    gap:25,
+    gap:20,
     paddingHorizontal:5,
-    paddingVertical:25
+    paddingVertical:20,
    },
   title: {
     fontSize: 24,
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     color: colors.darkRed,
-    marginBottom: 20,
+    marginBottom: 15,
   },
   priceContainer: {
     flexDirection: 'row',
@@ -75,7 +76,8 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 28,
     fontWeight: 'bold',
-    color: colors.darkRed,
+    color: "green",
+    paddingVertical: 3,
   },
   buyNowButton: {
     backgroundColor: colors.red2,
