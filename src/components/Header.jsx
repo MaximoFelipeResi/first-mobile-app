@@ -4,7 +4,7 @@ import React from 'react'
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.logo}>Tienda online</Text>
+      <Text style={styles.logo}>Tecnorojo</Text>
     </View>
   )
 }

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import allProducts from "../../data/products.json";
-import allCategories from "../../data/categories.json";
+import allProducts from "../../../data/products.json";
+import allCategories from "../../../data/categories.json";
 
 const initialState = {
     value:{
@@ -18,7 +18,7 @@ const initialState = {
         setCategoryFilter: (state, actions) => {
             state.value.categoryFilter = state.value.products.filter(product => product.category == actions.payload);
         },
-        setProductSelected: (state, actions) =>{
+        setProductSelected: (state, actions) => {
             state.value.productSelected = state.value.products.find(product => product.id === actions.payload);
         }
     }

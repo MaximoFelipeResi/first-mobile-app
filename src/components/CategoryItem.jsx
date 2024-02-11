@@ -9,7 +9,7 @@ const CategoryItem = ({ category, navigation, route }) => {
   return (
     <Pressable onPress={()=>{ 
         dispatch(setCategoryFilter(category))
-        navigation.navigate("Category",{category})
+        navigation.navigate("Category", {category})
       }}>
       <View style={styles.container}>
         <Text style={styles.text}>{category}</Text>

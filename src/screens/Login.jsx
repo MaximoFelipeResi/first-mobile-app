@@ -1,25 +1,32 @@
-import {useState ,useEffect} from "react"
-import { View, Text ,StyleSheet, Pressable} from "react-native"
-import { colors } from "../global/colors"
-import InputForm from "../components/InputForm"
-import SubmitButton from "../components/SubmitButton"
-import { useLoginMutation } from "../redux/auth"
-import { useDispatch } from "react-redux"
-import { setUser } from "../redux/slices/authSlice"
+import {useState ,useEffect} from "react";
+import { View, Text ,StyleSheet, Pressable} from "react-native";
+import { colors } from "../global/colors";
+import InputForm from "../components/InputForm";
+import SubmitButton from "../components/SubmitButton";
+import { useLoginMutation } from "../redux/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/slices/authSlice";
+import { insertSession } from "../../src/index";
 
-const Login = ({navigation}) => {
-  const dispatch = useDispatch()
-  const [triggerLogin,{data, error, isError, isSuccess, isLoading}] = useLoginMutation()
-  const [email,setEmail] = useState("")
-  const [password,setPassword] = useState("")
+const Login = ({ navigation }) => {
+
+  const dispatch = useDispatch();
+  const [triggerLogin, {data, error, isError, isSuccess, isLoading}] = useLoginMutation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   useEffect(()=>{
-    if(isSuccess) dispatch(setUser(data))
+    if(isSuccess) {
+      dispatch(setUser(data))
+      insertSession(data)
+        .then(result => console.log(result))
+        .catch(err => console.log(err))
+    }
     if(isError) console.log(error)
-  },[data,isError,isSuccess])
+  },[data, isError, isSuccess]);
 
   const onSubmit = () => {
-    triggerLogin({email,password})
+    triggerLogin({email, password})
   }
 
   return (
@@ -41,9 +48,9 @@ const Login = ({navigation}) => {
             error=""
           />
           <SubmitButton onPress={onSubmit} title="Enviar"/>
-          <Text style={styles.sub}>¿No tienes una cuenta?</Text>
+          <Text style={styles.sec}>¿No tienes una cuenta?</Text>
           <Pressable onPress={()=> navigation.navigate("Signup")} >
-              <Text style={styles.subLink}>Sign up</Text>
+              <Text style={styles.secLink}>Sign up</Text>
           </Pressable>
       </View>
     </View>
@@ -71,11 +78,11 @@ const styles = StyleSheet.create({
       fontSize:22,
       fontFamily:"Inconsolata"
     },
-    sub:{
+    sec:{
       fontSize:14,
       fontFamily:"Inconsolata"
     },
-    subLink:{
+    secLink:{
       fontSize:14,
       fontFamily:"Inconsolata",
       color:"blue"
